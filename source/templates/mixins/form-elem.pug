@@ -1,0 +1,38 @@
+mixin form-elem(data)
+  case data.name
+    when 'question'
+      .form-elem.form-elem--input.form-elem--textarea&attributes(attributes)
+        label.visually-hidden(for=data.id)= data.label
+        textarea.form-elem__input(
+          name=data.name
+          placeholder=data.placeholder
+          minLength=data.minLength
+          maxLength=data.maxLength
+          required=data.required
+          id=data.id
+        )
+        span.form-elem__icon
+        span.form-elem__message
+    when 'agreement'
+      .form-elem.form-elem--checkbox&attributes(attributes)
+        input#agreement.visually-hidden.form-elem__input(
+          name='agreement'
+          type='checkbox'
+          required
+        )
+        label.form-elem__label(for='agreement')= 'Я согласен с условиями '
+          a.form-elem__link(href='#') пользовательского соглашения.
+        span.form-elem__message
+    default
+      .form-elem.form-elem--input&attributes(attributes)
+        label.visually-hidden(for=data.id)= data.label
+        input.form-elem__input(
+          name=data.name
+          placeholder=data.placeholder
+          minLength=data.minLength
+          maxLength=data.maxLength
+          required=data.required
+          id=data.id
+        )
+        span.form-elem__icon
+        span.form-elem__message

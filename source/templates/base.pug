@@ -1,0 +1,35 @@
+block varaiables
+
+doctype html
+html(lang=meta.lang)
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+    link(type='image/x-icon' rel='icon' href='/favicon.ico')
+
+    //- Primary Meta Tags
+    title= meta.title
+    meta(name='title' content=meta.title)
+    meta(name='description' content=meta.description)
+
+    //- Open Graph / Facebook
+    meta(property='og:type' content='website')
+    meta(property='og:title' content=meta.title)
+    meta(property='og:description' content=meta.description)
+    meta(property='og:image' content=meta.preview)
+
+    //- Twitter
+    meta(property='twitter:card' content='summary_large_image')
+    meta(property='twitter:title' content=meta.title)
+    meta(property='twitter:description' content=meta.description)
+    meta(property='twitter:image' content=meta.preview)
+
+    //- Styles
+    link(href='css/styles.css' rel='stylesheet')
+
+  body
+    block main
+
+    //- Scripts
+    script(src='js/main.min.js')

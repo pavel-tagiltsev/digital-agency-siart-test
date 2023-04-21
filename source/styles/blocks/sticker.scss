@@ -1,0 +1,97 @@
+.sticker {
+  display: inline-block;
+  padding: 4px 8px;
+
+  font-weight: 700;
+  font-size: inherit;
+  font-family: $font-secondary;
+  line-height: inherit;
+
+  border-radius: 5px;
+
+  &--in-stock {
+    color: #64b847;
+
+    background-color: #f0f7ee;
+  }
+
+  &--out-stock {
+    color: #e16a6a;
+
+    background-color: #f7eeee;
+  }
+
+  &--hit {
+    color: $primary-white;
+
+    background-color: #ec7b52;
+  }
+
+  &--new {
+    color: $primary-white;
+
+    background-color: $primary-blue;
+  }
+
+  &--percent {
+    color: $primary-white;
+
+    background-color: #fcdf28;
+  }
+
+  &--sale {
+    color: $primary-white;
+
+    background-color: #67bb49;
+  }
+
+  &--view {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    color: $primary-gray;
+
+    background-color: $primary-white;
+    box-shadow: 0 2px 7px rgba(28, 45, 64, 0.12);
+    cursor: pointer;
+
+    &::before {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+
+      content: url('../images/magnifier.svg');
+    }
+  }
+
+  &--article {
+    color: $primary-gray;
+    font-weight: 400;
+
+    background-color: $primary-white;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &--reviews {
+    display: inline-flex;
+    align-items: center;
+
+    color: $primary-gray;
+    font-weight: 400;
+
+    background-color: $primary-white;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &::before {
+      width: 12px;
+      height: 12px;
+      margin-right: 4px;
+
+      content: url('../images/message-cloud.svg');
+    }
+  }
+}

@@ -1,0 +1,6 @@
+mixin button(content='Кнопка', mod='primary', icon)
+  button(class!=`button button--${mod}`)&attributes(attributes)
+    if icon
+      svg.button__icon
+        use(xlink:href!=`#${icon}`)
+    span.button__label= content

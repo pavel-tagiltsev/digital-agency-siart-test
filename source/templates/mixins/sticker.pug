@@ -1,0 +1,20 @@
+mixin sticker(type, content)
+  case type
+    when 'in-stock'
+      span.sticker.sticker--in-stock&attributes(attributes) В наличии
+    when 'out-stock'
+      span.sticker.sticker--out-stock&attributes(attributes) Нет в наличии
+    when 'hit'
+      span.sticker.sticker--hit&attributes(attributes) Хит
+    when 'new'
+      span.sticker.sticker--new&attributes(attributes) Новинка
+    when 'percent'
+      span.sticker.sticker--percent&attributes(attributes) %
+    when 'sale'
+      span.sticker.sticker--sale&attributes(attributes) Акция
+    when 'view'
+      span.sticker.sticker--view&attributes(attributes) Быстрый просмотр
+    when 'article'
+      span.sticker.sticker--article&attributes(attributes)= content ? content : 'Арт. 4501390'
+    when 'reviews'
+      span.sticker.sticker--reviews&attributes(attributes)= content ? content : 5

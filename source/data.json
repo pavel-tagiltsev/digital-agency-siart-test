@@ -1,0 +1,176 @@
+{
+  "pages": {
+    "index": {
+      "page": "index",
+      "meta": {
+        "lang": "ru",
+        "title": "Главная страница",
+        "description": "Главная страница с тестовыми заданиями для компании Digital Agency Siart",
+        "preview": "@img/meta-preview.jpg"
+      },
+      "cards": [
+        {
+          "title": "Ингалятор компрессорный компактный MED-125",
+          "src": "./images/good-1.png",
+          "prices": {
+            "new": "1 494 ₽",
+            "old": "1 494 ₽"
+          },
+          "stickers": ["in-stock", "hit"],
+          "article": "Арт. 4501390",
+          "reviews": 16,
+          "btnType": "counter"
+        },
+        {
+          "title": "Облучатель-рециркулятор медицинский СH111-115",
+          "src": "./images/good-2.png",
+          "prices": {
+            "new": "6 284 ₽",
+            "old": "1 494 ₽"
+          },
+          "stickers": ["out-stock", "hit"],
+          "article": "Арт. 4501390",
+          "reviews": 3,
+          "btnType": "light"
+        },
+        {
+          "title": "Облучатель-рециркулятор медицинский СH111-115",
+          "src": "./images/good-3.png",
+          "prices": {
+            "new": "6 284 ₽",
+            "old": "1 494 ₽"
+          },
+          "stickers": ["out-stock", "hit"],
+          "article": "Арт. 4501390",
+          "reviews": 9,
+          "btnType": "cart"
+        },
+        {
+          "title": "Термометр мед.электр.WT-03",
+          "src": "./images/good-4.png",
+          "prices": {
+            "new": "904 ₽",
+            "old": "1 494 ₽"
+          },
+          "stickers": ["in-stock", "new"],
+          "article": "Арт. 4501390",
+          "reviews": 43,
+          "btnType": "cart"
+        },
+        {
+          "title": "Насадки CS Medica SP-12 для зубной щетки CS Medica SonicPulsar CS-131",
+          "src": "./images/good-5.png",
+          "prices": {
+            "new": "3 736 ₽",
+            "old": "1 494 ₽"
+          },
+          "stickers": ["out-stock", "new", "percent"],
+          "article": "Арт. 4501390",
+          "reviews": 7,
+          "btnType": "cart"
+        },
+        {
+          "title": "Ингалятор компрессорный компактный MED-125",
+          "src": "./images/good-1.png",
+          "prices": {
+            "new": "1 494 ₽",
+            "old": "1 494 ₽"
+          },
+          "stickers": ["in-stock", "hit"],
+          "article": "Арт. 4501390",
+          "reviews": 16,
+          "btnType": "counter"
+        },
+        {
+          "title": "Облучатель-рециркулятор медицинский СH111-115",
+          "src": "./images/good-2.png",
+          "prices": {
+            "new": "6 284 ₽",
+            "old": "1 494 ₽"
+          },
+          "stickers": ["out-stock", "hit"],
+          "article": "Арт. 4501390",
+          "reviews": 3,
+          "btnType": "light"
+        },
+        {
+          "title": "Облучатель-рециркулятор медицинский СH111-115",
+          "src": "./images/good-3.png",
+          "prices": {
+            "new": "6 284 ₽",
+            "old": "1 494 ₽"
+          },
+          "stickers": ["out-stock", "hit"],
+          "article": "Арт. 4501390",
+          "reviews": 9,
+          "btnType": "cart"
+        },
+        {
+          "title": "Термометр мед.электр.WT-03",
+          "src": "./images/good-4.png",
+          "prices": {
+            "new": "904 ₽",
+            "old": "1 494 ₽"
+          },
+          "stickers": ["in-stock", "new"],
+          "article": "Арт. 4501390",
+          "reviews": 43,
+          "btnType": "cart"
+        },
+        {
+          "title": "Насадки CS Medica SP-12 для зубной щетки CS Medica SonicPulsar CS-131",
+          "src": "./images/good-5.png",
+          "prices": {
+            "new": "3 736 ₽",
+            "old": "1 494 ₽"
+          },
+          "stickers": ["out-stock", "new", "percent"],
+          "article": "Арт. 4501390",
+          "reviews": 7,
+          "btnType": "cart"
+        }
+      ],
+      "formElems": [
+        {
+          "node": "input",
+          "label": "Имя",
+          "id": "name",
+          "name": "name",
+          "type": "text",
+          "placeholder": "Имя*",
+          "required": true
+        },
+        {
+          "node": "input",
+          "label": "Номер телефона",
+          "id": "phone",
+          "name": "phone",
+          "type": "tel",
+          "placeholder": "Телефон*",
+          "minLength": 18,
+          "maxLength": 18,
+          "required": true
+        },
+        {
+          "node": "input",
+          "label": "Адрес электронной почты",
+          "id": "email",
+          "name": "email",
+          "type": "email",
+          "placeholder": "E-mail*",
+          "required": true
+        },
+        {
+          "node": "textarea",
+          "label": "Ваш вопрос",
+          "id": "question",
+          "name": "question",
+          "placeholder": "Вопрос*",
+          "minLength": 30,
+          "maxLength": 1000,
+          "required": true
+        }
+      ]
+    }
+  }
+}

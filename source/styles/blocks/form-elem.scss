@@ -1,0 +1,207 @@
+.form-elem {
+  &__message {
+    display: none;
+    margin-top: 4px;
+
+    font-weight: 400;
+    font-size: 10px;
+    font-family: $font-secondary;
+    line-height: 12px;
+  }
+}
+
+.form-elem--input {
+  position: relative;
+
+  & > .form-elem__input {
+    width: 100%;
+    height: 44px;
+    padding: 12px 16px;
+
+    color: $primary-black;
+    font-size: inherit;
+    font-family: $font-base;
+    line-height: inherit;
+
+    background-color: #f5f8fa;
+    border: none;
+    border-radius: 8px;
+
+    @include media('>=large-desktop') {
+      height: 52px;
+
+      border-radius: 12px;
+    }
+
+    &::placeholder {
+      color: $primary-gray;
+    }
+
+    &:hover {
+      background-color: #eff2f6;
+    }
+
+    &:focus {
+      background-color: #f5f8fa;
+    }
+
+    &:focus ~ .form-elem__icon {
+      display: block;
+    }
+  }
+
+  & > .form-elem__icon {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+
+    display: none;
+    width: 25px;
+    height: 25px;
+
+    background-image: url('../images/cross.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+
+    content: '';
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @include media('>=large-desktop') {
+      top: 14px;
+    }
+  }
+}
+
+.form-elem--textarea {
+  & > .form-elem__input {
+    height: 108px;
+
+    resize: none;
+
+    @include media('>=768px') {
+      height: 68px;
+    }
+
+    @include media('>=1020px') {
+      height: 132px;
+    }
+  }
+}
+
+.form-elem--checkbox {
+  position: relative;
+
+  & > .form-elem__input {
+    top: 50%;
+    left: 50%;
+
+    &:focus ~ .form-elem__label::before {
+      background-color: #dae8fa;
+    }
+
+    &:focus ~ .form-elem__label {
+      outline: 2px solid $primary-blue;
+    }
+
+    &:not(:disabled) ~ .form-elem__label:hover::before {
+      background-color: #e2eefc;
+    }
+
+    &:disabled ~ .form-elem__label::before {
+      background-color: $primary-white;
+      cursor: default;
+    }
+
+    &:checked ~ .form-elem__label::after {
+      position: absolute;
+      top: calc(50% - 8px);
+      left: 7px;
+
+      width: 10px;
+      height: 10px;
+
+      content: url('../images/blue-check.svg');
+    }
+  }
+
+  & > .form-elem__label {
+    position: relative;
+
+    display: inline-block;
+    margin: 0;
+    padding: 5px 5px 5px 37px;
+
+    color: $primary-gray;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: calc(50% - 10px);
+      left: 5px;
+
+      width: 20px;
+      height: 20px;
+
+      background-color: #edf5fe;
+      border-radius: 4px;
+
+      content: '';
+    }
+  }
+
+  & > .form-elem__link {
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}
+
+.form-elem--error {
+  & > .form-elem__input {
+    background-color: #faf1f1;
+  }
+
+  & > .form-elem__message {
+    display: block;
+
+    color: $error-message-color;
+  }
+
+  &.form-elem--checkbox > .form-elem__message {
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+
+.form-elem--success {
+  & > .form-elem__icon {
+    display: block;
+
+    background-image: url('../images/green-check.svg');
+    background-repeat: no-repeat;
+  }
+
+  & > .form-elem__input {
+    background-color: #f0f7ee;
+  }
+
+  & > .form-elem__message {
+    display: block;
+
+    color: $success-message-color;
+  }
+
+  &.form-elem--checkbox > .form-elem__message {
+    display: inline-block;
+    margin-left: 5px;
+  }
+}

@@ -1,0 +1,10 @@
+mixin slider(cards)
+  .swiper.slider&attributes(attributes)
+    .slider__top
+      h2.slider__title Новые поступления
+      +slider-navigation.slider__navigation
+    ul.swiper-wrapper.slider__wrapper
+      each card in cards
+        li.swiper-slide.slider__slide
+          +card(card)
+    .slider-pagination.slider__pagination

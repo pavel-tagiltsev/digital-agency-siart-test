@@ -1,0 +1,7 @@
+mixin modal
+  .modal&attributes(attributes)
+    .modal__content
+      +button-icon('close').modal__close
+      p.modal__title Спасибо!
+      p.modal__text Вопрос отправлен
+      +button('Хорошо :)', 'ghost').modal__button

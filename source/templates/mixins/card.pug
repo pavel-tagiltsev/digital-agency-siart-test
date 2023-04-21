@@ -1,0 +1,21 @@
+mixin card(data)
+  .card&attributes(attributes)
+    +card-img(data).card__img
+
+    h3.card__title= data.title
+    ul.card__stickers
+      each sticker in data.stickers
+        li.card__sticker
+          +sticker(sticker)
+    .card__prices
+      span.card__new-price= data.prices.new
+        span.card__measurement-unit шт.
+      span.card__old-price= data.prices.old
+
+    case data.btnType
+      when 'counter'
+        +cart-counter.card__button
+      when 'cart'
+        +button('В корзину', 'ghost', 'cart').card__button(type='button')
+      default
+        +button('Заказать', 'light').card__button(type='button')

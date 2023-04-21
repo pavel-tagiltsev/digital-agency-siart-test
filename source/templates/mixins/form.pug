@@ -1,0 +1,15 @@
+mixin form
+  .form&attributes(attributes)
+    .container
+      form.form__inner(method='post' action='#')
+        .form__top
+          h2.form__title Не нашли ответа на свой вопрос?
+          p.form__text Напишите нам, и мы предоставим необходимую информацию.
+
+        .form__center
+          each formElem in formElems
+            +form-elem(formElem).form__form-elem
+
+        .form__bottom
+          +button('Задать вопрос', 'primary').form__button(type='submit')
+          +form-elem({name: 'agreement'}).form__checkbox

@@ -1,0 +1,14 @@
+build
+
+.editorconfig
+.eslintignore
+.gitignore
+.prettierignore
+.stylelintignore
+
+.gitkeep
+.DS_Store
+
+source/favicons
+source/fonts
+source/images

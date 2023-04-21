@@ -1,0 +1,86 @@
+.card-img {
+  position: relative;
+
+  height: 148px;
+  margin-bottom: 12px;
+
+  &:hover > .card-img__view {
+    visibility: visible;
+  }
+
+  @include media('>=large-desktop') {
+    height: 184px;
+  }
+
+  &__list {
+    position: absolute;
+    top: 4.5px;
+    right: 3px;
+
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    margin-right: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__article,
+  &__rewiews,
+  &__view {
+    font-size: 10px;
+    line-height: 12px;
+
+    @include media('>=large-desktop') {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  &__article {
+    position: absolute;
+    bottom: 1px;
+    left: 4px;
+  }
+
+  &__rewiews {
+    position: absolute;
+    right: 4px;
+    bottom: 1px;
+  }
+
+  &__view {
+    $width: 140px;
+    $height: 28px;
+    position: absolute;
+    top: calc(50% - calc($height / 2));
+    left: calc(50% - calc($width / 2));
+
+    width: $width;
+    height: $height;
+
+    visibility: hidden;
+
+    @include media('>=large-desktop') {
+      $width: 160px;
+      $height: 28px;
+      top: calc(50% - calc($height / 2));
+      left: calc(50% - calc($width / 2));
+
+      width: $width;
+      height: $height;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    object-fit: contain;
+  }
+}

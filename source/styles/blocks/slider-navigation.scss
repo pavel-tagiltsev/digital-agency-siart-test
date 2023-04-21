@@ -1,0 +1,29 @@
+.slider-navigation {
+  display: inline-flex;
+
+  border: 1px solid #eceff8;
+  border-radius: 100px;
+
+  &__button {
+    width: 40px;
+    height: 40px;
+
+    &--prev,
+    &--next {
+      background-color: transparent;
+      border-radius: 50px;
+
+      & > .button__icon {
+        width: 45%;
+        height: 45%;
+
+        fill: none;
+        stroke: $primary-blue;
+      }
+    }
+
+    &--next {
+      transform: rotate(-180deg);
+    }
+  }
+}

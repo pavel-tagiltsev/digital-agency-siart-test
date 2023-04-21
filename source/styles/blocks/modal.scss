@@ -1,0 +1,144 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: z('modal');
+
+  display: none;
+  overflow: hidden;
+
+  background-color: $primary-white;
+
+  @include media('>=tablet') {
+    background-color: rgba(0, 0, 0, 10%);
+  }
+
+  &--opened {
+    display: block;
+  }
+
+  &__content {
+    $min-heigth: 290px;
+    position: relative;
+    top: calc(50% - calc($min-heigth / 2));
+
+    width: 300px;
+    min-height: $min-heigth;
+    margin: 0 auto;
+    padding: 100px 28px 28px;
+
+    text-align: center;
+
+    background-color: $primary-white;
+    border-radius: 24px;
+
+    @include media('>=tablet') {
+      width: 460px;
+      padding-top: 150px;
+    }
+
+    @include media('>=1600px') {
+      $min-height: 300px;
+      top: calc(50% - calc($min-height / 2));
+
+      width: 420px;
+      min-height: $min-heigth;
+    }
+
+    &::before {
+      $size: 80px;
+
+      position: absolute;
+      top: 0;
+      left: calc(50% - calc($size / 2));
+
+      width: $size;
+      height: $size;
+
+      background-image: url('../images/smile.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      content: '';
+
+      @include media('>=tablet') {
+        $size: 100px;
+        top: 28px;
+        left: calc(50% - calc($size / 2));
+
+        width: $size;
+        height: $size;
+      }
+    }
+  }
+
+  &__close {
+    position: fixed;
+    top: 28px;
+    right: 28px;
+
+    border-radius: 50px;
+
+    stroke: $primary-blue;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 7px rgba(28, 45, 64, 0.12);
+    }
+
+    &:active {
+      box-shadow: 0 0 5px rgba(28, 45, 64, 0.1);
+
+      fill: $primary-white;
+    }
+
+    @include media('>=tablet') {
+      position: absolute;
+      top: 0;
+      right: -35px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 4px;
+
+    color: $primary-black;
+    font-weight: 500;
+    font-size: inherit;
+    line-height: 24px;
+
+    @include media('>=1600px') {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 16px;
+
+    color: $primary-gray;
+    font-size: 12px;
+
+    @include media('>=tablet') {
+      margin-bottom: 24px;
+    }
+
+    @include media('>=1600px') {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    width: 200px;
+
+    @include media('>=tablet') {
+      width: 100%;
+    }
+  }
+}
