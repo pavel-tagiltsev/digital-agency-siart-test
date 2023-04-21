@@ -85,10 +85,20 @@ export default class Modal {
 
   disableDocumentScroll = () => {
     document.querySelector('html').style.overflow = 'hidden';
+    document.querySelector('html').style.touchAction = 'none';
+    document.addEventListener('touchmove', this.onDocumentTouchmove);
   };
 
   allowDocumentScroll = () => {
     document.querySelector('html').style.overflow = 'auto';
+    document.querySelector('html').style.touchAction = '';
+    document.removeEventListener('touchmove', this.onDocumentTouchmove, {
+      passive: true
+    });
+  };
+
+  onDocumentTouchmove = (evt) => {
+    evt.preventDefault();
   };
 
   getScrollWidth = () => {
@@ -116,7 +126,6 @@ export default class Modal {
     }
 
     document.body.removeChild(outer);
-    console.log(w1 - w2);
     return w1 - w2;
   };
 }
