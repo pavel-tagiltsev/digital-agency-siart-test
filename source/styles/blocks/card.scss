@@ -86,6 +86,14 @@
     margin-left: 5px;
 
     color: $primary-gray;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    @include media('>=large-desktop') {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__old-price {
